@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         arch: [ 'i686', 'x86_64' ]
-        buildtype: [ 'debug', 'release' ]
+        buildtype: [ 'release' ] # + 'debug'
     container:
       image: jonaski/strawberry-mxe-${{matrix.arch}}-${{matrix.buildtype}}
     steps:
@@ -210,7 +210,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: [ 'x86', 'x86_64' ]
+        arch: [ 'x86_64' ] # + 'x86'
         buildtype: [ 'release' ]
     steps:
 
